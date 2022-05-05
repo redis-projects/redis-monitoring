@@ -1,0 +1,13 @@
+apiVersion: integreatly.org/v1alpha1
+kind: GrafanaDashboard
+metadata:
+  labels:
+    app: grafana
+  name: grafana-redis-node-dashboard
+spec:
+  configMapRef:
+    key: json
+    name: grafana-dashboard-redis-node-definition
+  datasources:
+    - datasourceName: Prometheus
+      inputName: DS_PROMETHEUS1
